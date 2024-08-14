@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>My Image Gallery</h1>
+        <nav>
+            <ul class="nav-menu">
+                <li onclick="showSection('gallery')">Gallery</li>
+                <li onclick="showSection('about')">About</li>
+                <li onclick="showSection('contact')">Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <section id="welcome" class="welcome-section">
+            <div class="welcome-message">
+                <h2>Welcome to My Image Gallery</h2>
+                <p>Explore and enjoy a collection of beautiful images categorized just for you.</p>
+                <button class="start-button" onclick="showSection('gallery')">Enter Gallery</button>
+            </div>
+        </section>
+
+        <main>
+            <section id="gallery" class="content-section">
+                <div class="filter-buttons">
+                    <button onclick="filterCategory('all')">All</button>
+                    <button onclick="filterCategory('nature')">Nature</button>
+                    <button onclick="filterCategory('university')">University</button>
+                    <button onclick="filterCategory('people')">People</button>
+                </div>
+                <div class="main-gallery">
+                    <div class="gallery-grid">
+                        <img src="imgs/Nature/EYQE0083.JPG" alt="Nature" class="category nature"
+                            onclick="openLightbox(0)">
+                        <img src="imgs/University/IMG_5246.JPG" alt="University" class="category university"
+                            onclick="openLightbox(1)">
+                        <img src="imgs/People/images.jpg" alt="People" class="category people" onclick="openLightbox(2)">
+                        <img src="imgs/Nature/IMG_1663.JPG" alt="Nature" class="category nature" onclick="openLightbox(3)">
+                        <img src="imgs/University/IMG_3728.JPG" alt="University" class="category university"
+                            onclick="openLightbox(4)">
+                        <img src="imgs/People/virat-kohli-bcci.jpg" alt="People" class="category people" onclick="openLightbox(5)">
+
+                        <img src="imgs/Nature/IMG_8538.JPG" alt="Nature" class="category nature" onclick="openLightbox(6)">
+                        <img src="imgs/University/IMG_1321.JPG" alt="University" class="category university" onclick="openLightbox(7)">
+                        <img src="imgs/People/VIRAT-KOHLI.jpg" alt="People" class="category people" onclick="openLightbox(8)">
+                        <img src="imgs/Nature/IMG_8165.JPG" alt="Nature" class="category nature" onclick="openLightbox(9)">
+                        <img src="imgs/University/IMG_5544.JPG" alt="University" class="category university" onclick="openLightbox(10)">
+                        <img src="imgs/People/virat.jpg" alt="People" class="category people" onclick="openLightbox(11)">
+                        <!-- Add more images as needed -->
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="content-section">
+                <h2>About Us</h2>
+                <p>Welcome to our image gallery. Here, you can explore various categories of images and enjoy a visually
+                    rich experience. Our gallery is designed to showcase beautiful and diverse images from different
+                    categories.</p>
+            </section>
+
+            <section id="contact" class="content-section">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or feedback, feel free to reach out to us:</p>
+                <ul>
+                    <li>Email: <a href="mailto:info@example.com">talha.swb@gmail.com</a></li>
+                    <li>Phone: +92 314 7359118</li>
+                    <li>Address: 123 Gallery St, Imaginetown, IM 12345</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightboxImage" alt="Lightbox Image">
+        <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+        <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 capturebytalha</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
